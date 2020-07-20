@@ -1,0 +1,232 @@
+
+/*  . MODULES
+	-------------------------------------------
+
+
+//  . Header Components -----------------------
+
+.app-header
+
+	> .btn-nav-toggle
+		float: left
+		width: $header-height
+		height: $header-height
+		line-height: $header-height
+		text-align: center
+		border: none
+		background-color: transparent
+
+		+lg
+			display: none
+
+	> .items
+		float: right
+		display: inline-block
+		list-style: none
+
+		> li
+			line-height: $header-height
+
+			&:active
+				background-color: $blue-grey-700
+
+			> a
+				padding: 0 10px
+				display: block
+				color: #BBB
+
+				&:hover
+					color: #FFF
+
+				> img.img-circle
+					height: 30px
+					width: 30px
+
+					+md
+						height: 40px
+						width: 40px
+
+
+//  . Navigation Components -----------------------------
+
+.nav
+
+	> .brand
+		text-align: center
+		background-color: $orange-600
+
+		> a
+			line-height: $header-height
+			font-family: $font-family-brand
+			font-size: 40px
+			color: white
+
+	> .nav-menu
+		list-style: none
+		margin: 0
+		padding: 20px 0 0
+
+		> li
+
+			&.active
+				> a
+					border-left: 4px solid $orange-500
+					color: #444
+
+			> a
+				display: block
+				padding: 8px 0 8px 20px
+				color: #888
+				font-weight: 400
+
+
+//  . Login Components ------------------------
+
+.app-login
+
+	> .brand
+		font:
+			family: $font-family-brand
+			size: 60px
+		color: white
+
+	> .heading
+		color: white
+		font:
+			family: $heading-font
+			weight: 200
+
+
+//  . Page Heading -----------------------------
+
+.page-heading
+	margin-bottom: 20px
+
+	> h2
+		margin: 0
+		font:
+			weight: 100
+		color: $blue-grey-600
+
+
+//  . Wrapper ----------------------------------
+
+.wrapper
+	margin-bottom: 20px
+	background-color: white
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2)
+
+	> .heading
+		padding: 15px
+		border-bottom: 1px solid #DDD
+
+	> .body
+		padding: 20px
+
+	> .footer
+		padding: 15px
+		border-top: 1px solid #DDD
+
+
+/* Wait Screen Components */
+
+#wait-screen > h4
+	text-align: center
+	color: #888
+
+
+/* Spinner */
+
+.loader
+	text-align: center
+	padding: 20px
+	margin: 0 auto 1em
+
+
+//  . Answers
+
+.list-answers
+	list-style: none
+	padding: 0
+	margin-bottom: 30px
+
+	> li
+		margin-bottom: 15px
+
+		&:last-child
+			margin-bottom: 0
+
+		> button
+			text-align: left
+
+			> span
+				padding: 10px
+				margin-right: 10px
+				margin-left: -10px
+				border-right: 1px solid #DDD
+
+
+// Quiz Progress
+
+.quiz-progress
+	display: inline-block
+	margin: 0
+
+.quiz-progress > li
+	display: inline-block
+	width: 40px
+	height: 40px
+	line-height: 40px
+	text-align: center
+	border-radius: 50%
+	border: 1px dashed #CCC
+	color: #CCC
+
+.quiz-progress > li.current
+	border: 1px solid #888
+	color: #888
+
+.quiz-progress > li.success
+	border: 1px solid #43A047
+	background-color: #43A047
+	color: white
+
+.quiz-progress > li.error
+	border: 1px solid #F44336
+	background-color: #F44336
+	color: white
+
+
+//  . Quiz Timer -----------------------------
+
+.quiz-timer-container
+	text-align: center
+	margin-bottom: 30px
+
+	> progress-bar
+		position: relative
+		display: inline-block
+		height: 150px
+		width: 150px
+
+		> label
+			position: absolute
+			top: 50%
+			left: 50%
+			+transform(translate(-50%, -50%))
+			font:
+				size: 30px
+				family: "Lato", sans-serif
+
+
+//  . Footer Components -----------------------
+
+.copyright
+	padding: 20px 0
+	text-align: center
+	text-transform: capitalize
+	letter-spacing: 1px
+	font:
+		size: 12px
+		weight: 100
+	color: #BBB

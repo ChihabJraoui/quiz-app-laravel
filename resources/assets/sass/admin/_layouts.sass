@@ -1,0 +1,91 @@
+
+/*  . LAYOUTS
+    ------------------------------------------
+
+//  . Header
+
+.admin-header
+	position: fixed
+	z-index: 10
+	top: 0
+	left: 0
+	right: auto
+	width: 100%
+	height: $header-height
+	padding: 0 15px 0 0
+	+transition(left 0.4s)
+	color: #333
+	background-color: white
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2)
+
+	+md
+		left: $sidebar-width
+		width: auto
+		right: 0
+
+	&.is-extended
+		left: $sidebar-width
+
+
+
+//  . Sidebar
+
+.sidebar
+	position: fixed
+	z-index: 15
+	left: 0
+	top: 0
+	height: 100%
+	width: $sidebar-width
+	+transform(translateX(-$sidebar-width))
+	+transition(all 0.4s)
+	color: #DDD
+	background-color: $bg-dark
+
+	+md
+		width: $sidebar-width
+		+transform(translateX(0))
+
+	&.is-open
+		+transform(translateX(0))
+
+.admin-overlay
+	display: none
+	position: fixed
+	z-index: 14
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+
+	&.is-open
+		display: block
+
+
+//  . site content
+
+.admin-content
+	min-height: 100%
+	padding-top: $header-height + 20
+	background-color: $content-bg
+	+transition(all 0.4s)
+
+	+md
+		padding-left: $sidebar-width
+
+	&.is-extended
+		+transform(translateX($sidebar-width))
+
+		+md
+			+transform(translateX(0))
+			padding-left: $sidebar-width
+
+
+
+//  . Footer
+
+.admin-footer
+	background-color: #212121
+
+	+md
+		padding-left: $sidebar-width

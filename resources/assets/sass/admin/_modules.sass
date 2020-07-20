@@ -1,0 +1,233 @@
+
+/*  . MODULES -----------------------------------
+
+
+//  . Header Components
+
+.admin-header
+
+	> .btn-toggle
+		width: $header-height
+		line-height: $header-height
+		max-height: $header-height
+		float: left
+		border: none
+		border-right: 1px solid #DDD
+		background-color: transparent
+		color: #444
+
+		+md
+			display: none
+
+		&:hover
+			color: $accent-color
+
+
+	> .items
+		float: right
+		list-style: none
+		padding: 0
+		margin: 0
+
+		> li
+			display: inline-block
+			line-height: $header-height
+
+			> a
+				display: block
+				padding: 0 10px
+				color: #444
+
+				&:hover
+					color: $accent-color
+
+
+//  . Navigation Components
+
+.sidebar
+
+	> .brand
+		width: $sidebar-width
+		height: $header-height
+		font:
+			family: $font-brand
+			size: 30px
+		text-align: center
+		background-color: $primary-color
+
+		> a
+			line-height: $header-height
+			color: #DDD
+
+			&:hover
+				color: white
+
+	> .menu
+		list-style: none
+		padding: 0
+		margin: 20px 0 0
+
+		> li
+
+			> a
+				display: block
+				color: #CCC
+				padding: 8px 20px
+
+			&.active
+
+				> a
+					border-left: 4px solid $accent-color
+					color: white
+
+
+//  . Wrapper
+
+.wrapper
+	margin-bottom: 20px
+	background-color: white
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2)
+
+	> .heading
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		padding: 15px
+		border-bottom: 1px solid #EEE
+
+		> .items
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			list-style: none
+			margin-left: auto
+
+			> li
+				display: inline-block
+
+	> .body
+		padding: 20px
+
+	> .footer
+		padding: 15px
+		border-top: 1px solid #EEE
+
+	.table
+		margin-bottom: 0
+
+
+// Wait Screen Components
+
+#wait-screen > h4
+	text-align: center
+	color: #888
+
+
+/* Spinner */
+
+.loader
+	text-align: center
+	padding: 20px
+	margin: 0 auto 1em
+
+
+//  . DataTable -------------------------------
+
+.data-table
+	background-color: white
+
+	> .table
+
+
+//  . Toolbar ---------------------------------
+
+.toolbar
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	height: 60px
+	margin-bottom: 15px
+	background-color: $white
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2)
+
+	> .back
+		> a
+			padding: 0 10px
+			border-right: 1px solid #EEE
+
+	> .heading
+		padding-left: 10px
+
+		> h1, > h2, > h3, > h4, > h5, > h6
+			margin-top: 0
+			margin-bottom: 0
+			font:
+				weight: 200
+				size: 30px
+			color: $primary-color
+
+
+	> .items
+		margin: 0 0 0 auto
+
+		> li
+			display: inline-block
+			line-height: 60px
+
+			> button
+				margin-left: 6px
+				margin-right: 6px
+
+			> a
+				padding: 0 10px
+
+
+//  . Quiz Card --------------------------------
+
+.card-quiz
+	position: relative
+	margin-bottom: 20px
+	border-radius: 4px
+	background-color: white
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.2)
+
+	> .header
+		text-align: center
+		padding: 20px
+		color: $white
+		background-color: $primary-color
+
+	> .body
+		padding: 15px
+		border-bottom: 1px solid #EEE
+
+	> .footer
+		text-align: center
+		padding: 15px
+
+		> button, > a
+			display: inline-block
+			padding: 10px
+			margin-right: 10px
+			border-radius: 50%
+			border: 1px solid $accent-color
+			color: $link-color
+			background-color: transparent
+
+			&:last-child
+				margin-right: 0
+
+			&:hover
+				color: $link-hover-color
+				border-color: $link-hover-color
+
+
+
+//  . Footer Components
+
+.copyright
+	padding: 20px 0
+	text-align: center
+	text-transform: uppercase
+	font-size: 12px
+	color: #EEE

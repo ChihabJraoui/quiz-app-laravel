@@ -1,0 +1,38 @@
+
+html, body
+	height: 100%
+
+
+body
+	font-family: "open sans", sans-serif
+
+
+label
+	font-weight: normal
+
+
+
+a
+	color: $accent-color
+	text-decoration: none
+	+transition(color 0.3s)
+
+	&:hover
+		color: darken($accent-color, 20%)
+
+	&:hover, &:active, &:focus
+		text-decoration: none
+
+
+
+button
+
+	&:active, &:focus, &:focus:active
+		outline: none !important
+
+
+
+//  . Typography
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font-heading

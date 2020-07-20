@@ -1,0 +1,157 @@
+
+/*  . LAYOUTS
+    ------------------------------------------*/
+
+
+
+//  . Header ----------------------------------
+
+.app-header
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	right: 0
+	height: $header-height
+	padding-right: 15px
+	background-color: $blue-grey-800
+	color: #EEE
+
+	+lg
+		padding-left: $sidebar-width
+
+
+//  . Navigation ------------------------------
+
+.nav
+	position: fixed
+	z-index: 110
+	top: 0
+	left: 0
+	bottom: 0
+	width: $sidebar-width
+	display: block
+	background-color: white
+	+transform(translateX(-$sidebar-width))
+	+transition(transform 0.4s)
+
+	&.is-open
+		+transform(translateX(0))
+
+	+lg
+		+transform(translateX(0))
+
+
+.cover
+	display: none
+	position: fixed
+	z-index: 1
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background-color: rgba(0, 0, 0, 0.8)
+
+
+//  . Content ---------------------------------
+
+.app-content
+	position: relative
+	min-height: 100%
+	padding-top: $header-height + 20px
+	background-color: #EBEFF1
+
+	+lg
+		padding-left: $sidebar-width
+
+	&.-middle
+		display: flex
+		align-items: center
+
+
+//  . Login -------------------------------
+
+.app-login
+	position: relative
+	min-height: 100%
+
+	+md
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+		padding-left: 30px
+		padding-right: 430px
+		transform-style: preserve-3d
+		background:
+			color: #EBEFF1
+			image: url('../img/auth_bg.jpg')
+			position: center
+			size: cover
+
+		&:before
+			content: ''
+			position: absolute
+			z-index: -1
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background-color: rgba(0, 0, 0, 0.6)
+
+	> .overlay
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-left: 15px
+		padding-right: 15px
+		background-color: #EBEFF1
+
+		+sm
+			top: 30px
+			right: 30px
+			bottom: 30px
+			left: auto
+			max-width: 500px
+
+		+md
+			top: 20px
+			right: 20px
+			bottom: 20px
+			left: auto
+			max-width: 400px
+			background-color: transparent
+
+
+		+lg
+
+		> form
+			max-width: 400px
+			width: 400px
+
+
+
+//  . QUIZ SCREENS
+
+.l-progress
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 30px 0
+	text-align: center
+	background-color: white
+
+
+//  . Footer
+
+.layout-footer
+	background-color: #212121
+
+	+lg
+		padding-left: $sidebar-width

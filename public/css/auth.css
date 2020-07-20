@@ -1,0 +1,48 @@
+/*  . LAYOUTS
+ * ------------------------------------------ */
+.app-login {
+  position: relative;
+  min-height: 100%; }
+  @media only screen and (min-width: 576px) {
+    .app-login {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 30px;
+      padding-right: 430px;
+      transform-style: preserve-3d;
+      background-color: #EBEFF1;
+      background-image: url("../img/auth_bg.jpg");
+      background-position: center;
+      background-size: cover; }
+      .app-login:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6); } }
+  .app-login > .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white; }
+    @media only screen and (min-width: 576px) {
+      .app-login > .overlay {
+        left: auto;
+        width: 400px; } }
+    .app-login > .overlay > form {
+      max-width: 300px;
+      width: 300px; }
+
+/*# sourceMappingURL=auth.css.map */

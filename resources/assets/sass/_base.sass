@@ -1,0 +1,35 @@
+
+//  . Normalise ---------------------------------------
+
+html, body
+	height: 100%
+
+
+body
+	font:
+		size: 14px
+		family: $font-family-base
+		weight: 400
+
+
+a
+	color: $orange
+	+transition(color 0.3s)
+
+	&:hover
+		color: $orange-700
+
+	&:hover, &:focus
+		text-decoration: none
+
+
+
+button
+	cursor: pointer
+
+	&:focus, &:active, &:focus:active
+		outline: none
+
+
+label
+	font-weight: normal

@@ -1,0 +1,119 @@
+
+//  . BOOTSTRAP
+	--------------------------
+
+// buttons
+
+.btn
+	border-radius: 0 !important
+	border: none
+
+// table
+
+.table
+	> thead > tr
+		background-color: #EEE
+
+	> tbody > tr:first-child > th,
+	> tbody > tr:first-child > td
+		border-top: none !important
+
+// dropdown
+
+.admin-header
+
+	.dropdown-menu
+		margin-top: 0
+		padding: 0
+		border-radius: 0 !important
+
+
+//  . AngularJS
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+	display: none !important
+
+
+//  . Material Icons ---------------------
+
+.material-icons
+	vertical-align: middle
+	font-size: 20px
+
+	&.md-18
+		font-size: 18px
+	&.md-24
+		font-size: 24px
+	&.md-36
+		font-size: 36px
+	&.md-48
+		font-size: 48px
+
+	&.md-dark
+		color: rgba(0, 0, 0, 0.54)
+
+		&.md-inactive
+			color: rgba(0, 0, 0, 0.26)
+
+	&.md-light
+		color: rgba(255, 255, 255, 1)
+
+		&.md-inactive
+			color: rgba(255, 255, 255, 0.3)
+
+
+//  . ON/OFF Switch -----------------------
+
+.switch
+	position: absolute
+	margin-left: -9999px
+	visibility: hidden
+
+	+ label
+		display: inline-block
+		position: relative
+		cursor: pointer
+		outline: none
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
+
+input.switch
+	+ label
+		padding: 2px
+		width: 60px
+		height: 30px
+		background-color: #dddddd
+		border-radius: 30px
+		+transition(background 0.4s)
+
+		&:before, &:after
+			display: block
+			position: absolute
+			content: ""
+
+		&:before
+			top: 2px
+			left: 2px
+			bottom: 2px
+			right: 2px
+			background-color: #fff
+			border-radius: 30px
+			+transition(background 0.4s)
+
+		&:after
+			top: 4px
+			left: 4px
+			bottom: 4px
+			width: 22px
+			background-color: #dddddd
+			border-radius: 50%
+			+transition(margin 0.4s, background 0.4s)
+
+	&:checked + label
+		background-color: $accent-color
+
+		&:after
+			margin-left: 30px
+			background-color: $accent-color

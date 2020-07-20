@@ -1,0 +1,418 @@
+/*  Material Design color palette (full) downloaded from
+ *  http://htmlcolorcodes.com/color-charts/
+ *
+ *  Check out our powerful color picker
+ *  http://htmlcolorcodes.com/color-picker/
+ *
+ *  Want to learn more about colors in SCSS?
+ *  http://htmlcolorcodes.com/tutorials/
+ *
+ *  - - - - - - - - - - - - - - - - - - 
+ *  Credits:
+ *
+ *  Original color palette by
+ *  https://www.google.com/design/spec/style/color.html
+ *
+ *  - - - - - - - - - - - - - - - - - -
+ *  How to use:
+ *  
+ *  Include this file with your other .scss files:
+ *
+ *  @import "material_colors_full"
+ *  
+ *  and use the color variables in your stylesheets:
+ *	
+ *  .class {
+ *    color: $red-500
+ *  }
+ *
+ *  - - - - - - - - - - - - - - - - - -
+ *  Note:
+ *
+ *  $color and $color-500 are the same, simply there
+ *  for your convenience.
+ *
+ *  Variables with numbers prefixed by 'a' are accent colors
+ */
+/* Red */
+/* Pink */
+/* Purple */
+/* Deep Purple */
+/* Indigo */
+/* Blue */
+/* Light Blue */
+/* Cyan */
+/* Teal */
+/* Green */
+/* Light Green */
+/* Lime */
+/* Yellow */
+/* Amber */
+/* Orange */
+/* Deep Orange */
+/* Brown */
+/* Grey */
+/* Blue Grey */
+/* White / Black */
+/*  Want more? Check our our other color palettes at
+ *  http://htmlcolorcodes.com/color-charts/
+ */
+html, body {
+  height: 100%; }
+
+body {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400; }
+
+a {
+  color: #ff9800;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s; }
+  a:hover {
+    color: #f57c00; }
+  a:hover, a:focus {
+    text-decoration: none; }
+
+button {
+  cursor: pointer; }
+  button:focus, button:active, button:focus:active {
+    outline: none; }
+
+label {
+  font-weight: normal; }
+
+/*  . LAYOUTS
+ * ------------------------------------------ */
+.app-header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  padding-right: 15px;
+  background-color: #37474f;
+  color: #EEE; }
+  @media only screen and (min-width: 992px) {
+    .app-header {
+      padding-left: 220px; } }
+
+.nav {
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  display: block;
+  background-color: white;
+  -webkit-transform: translateX(-220px);
+  -moz-transform: translateX(-220px);
+  -ms-transform: translateX(-220px);
+  -o-transform: translateX(-220px);
+  transform: translateX(-220px);
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s; }
+  .nav.is-open {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+  @media only screen and (min-width: 992px) {
+    .nav {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0); } }
+
+.cover {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.app-content {
+  position: relative;
+  min-height: 100%;
+  padding-top: 80px;
+  background-color: #EBEFF1; }
+  @media only screen and (min-width: 992px) {
+    .app-content {
+      padding-left: 220px; } }
+  .app-content.-middle {
+    display: flex;
+    align-items: center; }
+
+.app-login {
+  position: relative;
+  min-height: 100%; }
+  @media only screen and (min-width: 768px) {
+    .app-login {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 30px;
+      padding-right: 430px;
+      transform-style: preserve-3d;
+      background-color: #EBEFF1;
+      background-image: url("../img/auth_bg.jpg");
+      background-position: center;
+      background-size: cover; }
+      .app-login:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6); } }
+  .app-login > .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #EBEFF1; }
+    @media only screen and (min-width: 576px) {
+      .app-login > .overlay {
+        top: 30px;
+        right: 30px;
+        bottom: 30px;
+        left: auto;
+        max-width: 500px; } }
+    @media only screen and (min-width: 768px) {
+      .app-login > .overlay {
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: auto;
+        max-width: 400px;
+        background-color: transparent; } }
+    .app-login > .overlay > form {
+      max-width: 400px;
+      width: 400px; }
+
+.l-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 0;
+  text-align: center;
+  background-color: white; }
+
+.layout-footer {
+  background-color: #212121; }
+  @media only screen and (min-width: 992px) {
+    .layout-footer {
+      padding-left: 220px; } }
+
+/*  . MODULES
+ * ------------------------------------------- */
+.app-header > .btn-nav-toggle {
+  float: left;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border: none;
+  background-color: transparent; }
+  @media only screen and (min-width: 992px) {
+    .app-header > .btn-nav-toggle {
+      display: none; } }
+.app-header > .items {
+  float: right;
+  display: inline-block;
+  list-style: none; }
+  .app-header > .items > li {
+    line-height: 60px; }
+    .app-header > .items > li:active {
+      background-color: #455a64; }
+    .app-header > .items > li > a {
+      padding: 0 10px;
+      display: block;
+      color: #BBB; }
+      .app-header > .items > li > a:hover {
+        color: #FFF; }
+      .app-header > .items > li > a > img.img-circle {
+        height: 30px;
+        width: 30px; }
+        @media only screen and (min-width: 768px) {
+          .app-header > .items > li > a > img.img-circle {
+            height: 40px;
+            width: 40px; } }
+
+.nav > .brand {
+  text-align: center;
+  background-color: #fb8c00; }
+  .nav > .brand > a {
+    line-height: 60px;
+    font-family: "Arizonia", cursive;
+    font-size: 40px;
+    color: white; }
+.nav > .nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 0; }
+  .nav > .nav-menu > li.active > a {
+    border-left: 4px solid #ff9800;
+    color: #444; }
+  .nav > .nav-menu > li > a {
+    display: block;
+    padding: 8px 0 8px 20px;
+    color: #888;
+    font-weight: 400; }
+
+.app-login > .brand {
+  font-family: "Arizonia", cursive;
+  font-size: 60px;
+  color: white; }
+.app-login > .heading {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 200; }
+
+.page-heading {
+  margin-bottom: 20px; }
+  .page-heading > h2 {
+    margin: 0;
+    font-weight: 100;
+    color: #546e7a; }
+
+.wrapper {
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+  .wrapper > .heading {
+    padding: 15px;
+    border-bottom: 1px solid #DDD; }
+  .wrapper > .body {
+    padding: 20px; }
+  .wrapper > .footer {
+    padding: 15px;
+    border-top: 1px solid #DDD; }
+
+/* Wait Screen Components */
+#wait-screen > h4 {
+  text-align: center;
+  color: #888; }
+
+/* Spinner */
+.loader {
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto 1em; }
+
+.list-answers {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px; }
+  .list-answers > li {
+    margin-bottom: 15px; }
+    .list-answers > li:last-child {
+      margin-bottom: 0; }
+    .list-answers > li > button {
+      text-align: left; }
+      .list-answers > li > button > span {
+        padding: 10px;
+        margin-right: 10px;
+        margin-left: -10px;
+        border-right: 1px solid #DDD; }
+
+.quiz-progress {
+  display: inline-block;
+  margin: 0; }
+
+.quiz-progress > li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px dashed #CCC;
+  color: #CCC; }
+
+.quiz-progress > li.current {
+  border: 1px solid #888;
+  color: #888; }
+
+.quiz-progress > li.success {
+  border: 1px solid #43A047;
+  background-color: #43A047;
+  color: white; }
+
+.quiz-progress > li.error {
+  border: 1px solid #F44336;
+  background-color: #F44336;
+  color: white; }
+
+.quiz-timer-container {
+  text-align: center;
+  margin-bottom: 30px; }
+  .quiz-timer-container > progress-bar {
+    position: relative;
+    display: inline-block;
+    height: 150px;
+    width: 150px; }
+    .quiz-timer-container > progress-bar > label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+      font-family: "Lato", sans-serif; }
+
+.copyright {
+  padding: 20px 0;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 100;
+  color: #BBB; }
+
+.btn {
+  font-size: 14px !important; }
+
+.form-control {
+  height: 40px;
+  padding: 10px 12px;
+  box-shadow: none; }
+  .form-control:focus {
+    box-shadow: none; }
+
+.dropdown-menu {
+  margin-top: 0;
+  border-radius: 0 !important; }
+  .dropdown-menu > .dropdown-item {
+    line-height: normal; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+.material-icons {
+  vertical-align: middle;
+  font-size: 20px; }
+
+/*# sourceMappingURL=app.css.map */
